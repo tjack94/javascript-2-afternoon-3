@@ -52,7 +52,7 @@ first(names, function(firstName){
 
 //Code Here
 function last(arr,cb){
-  cb(arr[arr.legnth -1])
+  cb(arr[arr.legnth-1])
 }
 // Do not edit the code below.
 last(names, function(lastName){
