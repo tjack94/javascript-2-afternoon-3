@@ -93,6 +93,13 @@ multiply(4, 3, function(answer){
 */
 
 //Code Here 
+function contains(arr,name,cb){
+  if(arr.inclueds(name)){
+    cb(true)
+  }else{
+    cb(false)
+  }
+}
 
 // Do not edit the code below.
 contains(names, 'Colt', function(result){
