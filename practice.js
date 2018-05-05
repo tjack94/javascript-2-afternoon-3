@@ -148,7 +148,7 @@ each(names, function(item, indice){
 // Do not edit the code above.
 function each(arr,cb){
  for(var i= 0; i < arr.length; i++){
-  arr.forEach(element => {cb(arr[i],i)
+  cb(arr[i],i)
   }
   )};
 }
