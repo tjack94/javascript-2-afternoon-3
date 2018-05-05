@@ -52,7 +52,7 @@ first(names, function(firstName){
 
 //Code Here
 function last(arr,cb){
-  cb(arr[arr.legnth-1])
+  cb(arr[arr.length-1])
 }
 // Do not edit the code below.
 last(names, function(lastName){
@@ -94,7 +94,7 @@ multiply(4, 3, function(answer){
 
 //Code Here 
 function contains(arr,name,cb){
-  if(arr.inclueds(name)){
+  if(arr.includes(name)){
     cb(true)
   }else{
     cb(false)
@@ -122,7 +122,15 @@ contains(names, 'Colt', function(result){
 
 //Code Here
 function uniq(arr,cb){
+  var newArray = []
+  for(var i = 0; i < arr.length; i++){
+    if(newArray.includes(arr[i])){
 
+    }else{
+       newArray.push(arr[i])
+    }
+  }
+  return cb(newArray)
 }
 // Do not edit the code below.
 uniq(names, function(uniqArr){
@@ -146,12 +154,12 @@ each(names, function(item, indice){
   console.log('The item in the ' + indice + ' position is ' + item)
 });
 // Do not edit the code above.
-// function each(arr,cb){
-//  for(var i= 0; i < arr.length; i++){
-//   cb(arr[i],i)
-//   }
-//   };
-// }
+ function each(arr,cb){
+ for(var i= 0; i < arr.length; i++){
+   cb(arr[i],i)   
+  }   
+  };
+ 
 
 
 ////////// PROBLEM 7 //////////
@@ -162,7 +170,13 @@ each(names, function(item, indice){
 */
 
 // Code here
-
+function getUserById(arr,id,cb){
+  for(var i = 0; i < arr.length; i++){
+    if(arr[i]["id"]== id){
+      cb(arr[i])
+    }
+  }
+}
 // Do not edit the code below.
 var users = [
   {
